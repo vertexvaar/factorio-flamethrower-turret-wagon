@@ -5,3 +5,5 @@ Date: 2026-10-24
     - Flamethrower wagon: a fluid wagon with two flamethrowers on its roof that work like flamethrower turrets, also while moving.
     - The flamethrowers burn crude, heavy or light oil from the wagon's tank and reach enemies right next to the train.
     - Works on elevated rails. Wagon quality carries over to the flamethrowers.
+  Info:
+    - Preview release: the wagon still uses the vanilla look, its own armoured art follows in the next version.
