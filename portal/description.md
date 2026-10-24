@@ -1,7 +1,5 @@
 A fluid wagon with two flamethrowers on its roof. They burn like flamethrower turrets, also while the train is moving.
 
-**Preview release:** the wagon still uses the vanilla look. Its own armoured art is on the way.
-
 ![Flamethrower wagon in action](https://raw.githubusercontent.com/vertexvaar/factorio-flamethrower-turret-wagon/main/previews/portal/1-fighting.png)
 
 ## How it works
