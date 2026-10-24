@@ -1,5 +1,6 @@
 local config = require("config")
 local rig = require("prototypes.rig")
+local graphics = require("prototypes.graphics")
 
 -- The wagon: a fluid wagon whose oil feeds the flamethrowers on its roof.
 local wagon = table.deepcopy(data.raw["fluid-wagon"]["fluid-wagon"])
@@ -15,6 +16,14 @@ wagon.color = { r = 0.55, g = 0.3, b = 0.15, a = 1 }
 wagon.allow_manual_color = true
 wagon.factoriopedia_simulation = nil
 rig.armour(wagon)
+local pictures = graphics.wagon_pictures()
+if pictures then
+  wagon.pictures = pictures
+  -- an armoured wagon has no sliding doors
+  wagon.horizontal_doors = nil
+  wagon.vertical_doors = nil
+end
+wagon.icons = graphics.icons("__base__/graphics/icons/flamethrower-turret.png") or wagon.icons
 -- its own flames must not hurt it: enemies that attack the train stand right next to it
 for _, r in pairs(wagon.resistances) do
   if r.type == "fire" then r.percent = 100 end
