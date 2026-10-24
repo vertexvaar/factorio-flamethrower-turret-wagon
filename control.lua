@@ -44,8 +44,9 @@ local function swap(rig, elevated)
   for i, old in pairs(rig.turrets) do
     local new = create_turret(rig.wagon, elevated, old.position)
     if config.fluid then
-      local fluid = old.get_fluid(1)
-      if fluid then new.insert_fluid(fluid) end
+      for name, amount in pairs(old.get_fluid_contents()) do
+        new.insert_fluid({ name = name, amount = amount })
+      end
     else
       local from = old.get_inventory(defines.inventory.turret_ammo)
       local to = new.get_inventory(defines.inventory.turret_ammo)
