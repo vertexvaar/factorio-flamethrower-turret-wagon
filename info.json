@@ -1,0 +1,10 @@
+{
+  "name": "flamethrower-turret-wagon",
+  "version": "0.1.0",
+  "title": "Flamethrower Wagon",
+  "author": "vertexvaar",
+  "homepage": "https://github.com/vertexvaar/factorio-flamethrower-turret-wagon",
+  "factorio_version": "2.1",
+  "description": "A fluid wagon with two flamethrower turrets on its roof. They work like flamethrower turrets, also while the train is moving, and burn oil from the wagon's tank.",
+  "dependencies": ["base >= 2.1.0"]
+}
