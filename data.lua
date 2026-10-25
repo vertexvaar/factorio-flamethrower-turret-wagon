@@ -52,8 +52,6 @@ turret.enough_fuel_indicator_light = nil
 data:extend({
   wagon,
   item,
-  turret,
-  rig.elevated(turret),
   {
     type = "recipe",
     name = config.wagon,
@@ -86,3 +84,4 @@ data:extend({
     },
   },
 })
+data:extend(rig.variants(turret, config.mounts))
