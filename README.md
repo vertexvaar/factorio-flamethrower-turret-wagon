@@ -1,30 +1,13 @@
 # Flamethrower Wagon
 
-Factorio 2.1 mod (Space Age optional). A fluid wagon with two flamethrower turrets on its roof. They work like
-flamethrower turrets, also while the train is moving, and burn oil from the wagon's tank.
+The flamethrower wagon now lives in **Military Wagons**, together with the machine gun, flamethrower and rocket wagons:
 
-- Fill the wagon with crude oil, heavy oil or light oil (25,000 units). Each flamethrower keeps its tank full.
-- The flamethrowers cover all sides, turn and unfold faster than a flamethrower turret and also fire at enemies
-  right next to the train (minimum range 2 instead of 6). The wagon itself is immune to fire; other rolling stock
-  close to the burning area is not.
-- Flamethrower damage research applies as usual. Wagon quality carries over to the flamethrowers.
-- Works on elevated rails.
-- Unlocked by the technology "Flamethrower wagon" (after fluid wagon and flamethrower).
+- Mod portal: [https://mods.factorio.com/mod/military-wagons](https://mods.factorio.com/mod/military-wagons)
+- Source: [https://github.com/vertexvaar/factorio-military-wagons](https://github.com/vertexvaar/factorio-military-wagons)
 
-## How it works
+This version is an empty bridge. It contains no wagon of its own and only depends on Military Wagons, so updating pulls in the new mod. Wagons in existing saves keep working.
 
-Factorio has no turrets on rolling stock. Each wagon gets two hidden turrets (not selectable, not attackable,
-no collision). While the wagon moves, the script teleports them along with it every tick; standing wagons cost
-nothing per tick. Every 30 ticks the flamethrowers are topped up from the wagon's tank.
-## Tests
+- Each wagon in Military Wagons can be switched off in the startup settings, if you only want this one.
+- When you switch over, the ammo loaded in the wagon's turrets is lost once. The turrets reload from the wagon's cargo or tank by themselves.
 
-    python tests/run.py                 # headless, with Space Age
-    python tests/run.py --no-space-age
-    python tests/ingame.py              # opens a game window: build, mine, ghost revive, blueprint
-    python tests/shots.py               # opens a game window briefly, writes previews/shots/*.png
-
-## Release
-
-    python tools/package.py             # dist/<name>_<version>.zip
-    python tools/publish.py publish     # first release (needs FACTORIO_API_KEY)
-    python tools/publish.py upload      # later releases
+Once Military Wagons is installed you can remove this mod.
